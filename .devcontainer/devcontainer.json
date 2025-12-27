@@ -2,12 +2,12 @@
   "name": "Node.js",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
 
-  // 要添加到开发容器的功能。更多信息请参见：https://containers.dev/features。
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    }
-  },
+  //  // 要添加到开发容器的功能。更多信息请参见：https://containers.dev/features。
+  //  "features": {
+  //    "ghcr.io/devcontainers/features/node:1": {
+  //      "version": "20"
+  //    }
+  //  },
 
   // 使用 'forwardPorts' 来将容器内的端口列表转发到本地。
   // "forwardPorts": [],
