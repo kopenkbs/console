@@ -3,7 +3,11 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
 
   // 要添加到开发容器的功能。更多信息请参见：https://containers.dev/features。
-  // "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
 
   // 使用 'forwardPorts' 来将容器内的端口列表转发到本地。
   // "forwardPorts": [],
@@ -12,8 +16,9 @@
   "postCreateCommand": [
     "apt-get update", // 更新软件包列表
     "apt-get install -y python2 make", // 安装 Python 2 和 make 工具
-    "export PYTHON=/usr/bin/python2" // 设置 Python 环境变量为 Python 2
+    "export PYTHON=/usr/bin/python2", // 设置 Python 环境变量为 Python 2
     //    "yarn install"  // 安装项目依赖
+    "go version && node --version && npm install -g @qwen-code/qwen-code@latest"
   ],
 
   // 配置工具特定的属性。
