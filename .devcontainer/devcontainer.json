@@ -1,33 +1,20 @@
 {
-  "name": "Node.js",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
+  "name": "Node.js 20",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bullseye",
 
-  //  // 要添加到开发容器的功能。更多信息请参见：https://containers.dev/features。
-  //  "features": {
-  //    "ghcr.io/devcontainers/features/node:1": {
-  //      "version": "20"
-  //    }
-  //  },
+  "postCreateCommand": "apt-get update && \
+    apt-get install -y python2 make && \
+    ln -s /usr/bin/python2 /usr/bin/python && \
+    echo 'export PYTHON=/usr/bin/python2' >> ~/.bashrc && \
+    node --version && npm install -g @qwen-code/qwen-code@latest",
 
-  // 使用 'forwardPorts' 来将容器内的端口列表转发到本地。
-  // "forwardPorts": [],
-
-  // 使用 'postCreateCommand' 在容器创建后执行命令。
-  "postCreateCommand": [
-    "apt-get update", // 更新软件包列表
-    "apt-get install -y python2 make", // 安装 Python 2 和 make 工具
-    "export PYTHON=/usr/bin/python2", // 设置 Python 环境变量为 Python 2
-    //    "yarn install"  // 安装项目依赖
-    "go version && node --version && npm install -g @qwen-code/qwen-code@latest"
-  ],
-
-  // 配置工具特定的属性。
   "customizations": {
     "jetbrains": {
       "backend": "WebStorm" // 配置 JetBrains WebStorm 后端
     }
-  }
+  },
 
-  // 如果想要以 root 用户连接容器，可以取消下面的注释。更多信息请参见：https://aka.ms/dev-containers-non-root。
-  // "remoteUser": "root"
+  "remoteEnv": {
+    "PYTHON": "/usr/bin/python2"
+  }
 }
