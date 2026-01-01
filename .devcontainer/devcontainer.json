@@ -3,8 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
 
   "features": {
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
-    "ghcr.io/jungaretti/features/make:1":{}
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
   },
   "customizations": {
     "jetbrains": {
