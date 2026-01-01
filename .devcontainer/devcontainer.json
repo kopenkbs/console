@@ -1,20 +1,14 @@
 {
-  "name": "Node.js 20",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bullseye",
+  "name": "kbs console",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
 
-  "postCreateCommand": "apt-get update && \
-    apt-get install -y python2 make && \
-    ln -s /usr/bin/python2 /usr/bin/python && \
-    echo 'export PYTHON=/usr/bin/python2' >> ~/.bashrc && \
-    node --version && npm install -g @qwen-code/qwen-code@latest",
-
+  "features": {
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/jungaretti/features/make:1":{}
+  },
   "customizations": {
     "jetbrains": {
-      "backend": "WebStorm" // 配置 JetBrains WebStorm 后端
+      "backend": "WebStorm"
     }
-  },
-
-  "remoteEnv": {
-    "PYTHON": "/usr/bin/python2"
   }
 }
