@@ -7,7 +7,9 @@
   },
   "customizations": {
     "jetbrains": {
-      "backend": "WebStorm"
+      "backend": "WebStorm",
+      "version": "2025.3.1"
     }
-  }
+  },
+  "postCreateCommand": "brew install qwen-code && brew unlink node"
 }
