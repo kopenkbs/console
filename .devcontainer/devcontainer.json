@@ -5,11 +5,11 @@
   "features": {
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
   },
+  "postCreateCommand": "bash .devcontainer/postCreate.sh",
   "customizations": {
     "jetbrains": {
       "backend": "WebStorm",
       "version": "2025.3.1"
     }
-  },
-  "postCreateCommand": "brew install qwen-code && brew unlink node"
+  }
 }
