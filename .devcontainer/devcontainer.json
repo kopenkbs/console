@@ -1,7 +1,12 @@
 {
   "name": "kbs console",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:14-bullseye",
-
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "containerEnv": {
+    "DOCKER_HOST": "unix:///var/run/docker.sock"
+  },
   "features": {
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
   },

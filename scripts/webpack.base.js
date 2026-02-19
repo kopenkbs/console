@@ -34,7 +34,7 @@ module.exports = {
   moduleRules: [
     {
       test: /\.jsx?$/,
-      include: root('src'),
+      include: [root('src'), root('node_modules/react-draggable'), root('node_modules/react-sortablejs')],
       use: 'happypack/loader?id=jsx',
     },
     {

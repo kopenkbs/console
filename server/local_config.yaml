@@ -1,0 +1,4 @@
+server:
+  apiServer:
+    url: http://host.docker.internal:9090
+    wsUrl: ws://host.docker.internal:9090
